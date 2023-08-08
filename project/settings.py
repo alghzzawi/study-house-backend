@@ -187,3 +187,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://study-house-backend-production.up.railway.app",
+]
