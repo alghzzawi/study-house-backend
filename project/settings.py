@@ -38,14 +38,13 @@ ENVIRONMENT = env.str("ENVIRONMENT")
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = '_8FA5WFWhy9nTXXY0H8bsLE1TLOujum2sdkVCjwcfEY'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DEBUG")
+DEBUG = True
 
-ALLOWED_HOSTS = 'study-house-backend.vercel.app'
-
+ALLOWED_HOSTS = ['*','.vercel.app']
 
 
 # Application definition
@@ -106,12 +105,12 @@ WSGI_APPLICATION = "project.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": env.str("DATABASE_ENGINE"),
-        "NAME": env.str("DATABASE_NAME"),
-        "USER": env.str("DATABASE_USER"),
-        "PASSWORD": env.str("DATABASE_PASSWORD"),
-        "HOST": env.str("DATABASE_HOST"),
-        "PORT": env.int("DATABASE_PORT"),
+        "ENGINE": 'django.db.backends.postgresql',
+        "NAME": 'tbtkmthq',
+        "USER": 'tbtkmthq',
+        "PASSWORD": 'fPKdgiddFy4PnpdkbVxoqAQKoWaBFlQi',
+        "HOST": 'drona.db.elephantsql.com',
+        "PORT": "",
     }
 }
 
@@ -157,9 +156,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
-]
+# CORS_ORIGIN_WHITELIST = [
+#     "http://localhost:3000",
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -179,9 +178,7 @@ REST_FRAMEWORK = {
     )
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
