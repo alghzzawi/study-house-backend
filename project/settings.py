@@ -44,7 +44,7 @@ SECRET_KEY = '_8FA5WFWhy9nTXXY0H8bsLE1TLOujum2sdkVCjwcfEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -181,9 +181,9 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_ALLOW_ALL = True
 
 
-STATIC_DIR = [os.path.join(BASE_DIR, 'static'),]
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
